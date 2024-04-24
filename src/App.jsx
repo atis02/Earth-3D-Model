@@ -6,23 +6,35 @@ import Earth from "../public/Earth";
 function App() {
   return (
     <>
-      <h1
-        style={{
-          textAlign: "center",
-          background: "gray",
-          paddingTop: 50,
-        }}
-      >
-        3D Model of Earth
-      </h1>
-      <Canvas>
-        <ambientLight />
-        <OrbitControls />
-        <Suspense fallback={null}>
-          <Earth />
-        </Suspense>
-        <Environment preset="sunset" />
-      </Canvas>
+      <div style={{ background: "gray", height: "85.7vh" }}>
+        <h1
+          style={{
+            textAlign: "center",
+            background: "gray",
+            paddingTop: 50,
+          }}
+        >
+          3D Model of Earth
+        </h1>
+        <p style={{ textAlign: "center", background: "gray" }}>
+          Copyright © {new Date().getFullYear()} | Powered by
+          <a
+            href="https://github.com/atis02"
+            style={{ textDecoration: "none", color: "#fff" }}
+          >
+            {""} Atamyrat Ikramow {""}
+          </a>
+          (Web Developer)
+        </p>
+        <Canvas>
+          <ambientLight />
+          <OrbitControls />
+          <Suspense fallback={null}>
+            <Earth />
+          </Suspense>
+          <Environment preset="sunset" />
+        </Canvas>
+      </div>
     </>
   );
 }
