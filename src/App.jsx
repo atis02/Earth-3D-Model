@@ -1,7 +1,7 @@
 import { Canvas } from "@react-three/fiber";
 import { Suspense } from "react";
 import { Environment, OrbitControls } from "@react-three/drei";
-import Earth from "./public/Earth";
+import Earth from "../public/Earth";
 
 function App() {
   return (
